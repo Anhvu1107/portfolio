@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Nguyen Anh Vu</title>
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <meta name="description"
+        content="Learn more about Nguyen Anh Vu, a Computer Science student passionate about software development and AI.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/effects.css">
+    <link rel="stylesheet" href="../css/pages/about.css">
+</head>
+
+<body class="loading">
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <span class="loader-text">Loading...</span>
+        </div>
+    </div>
+    <div class="page-transition"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="bg-animation">
+        <div class="bg-orb bg-orb-1" data-parallax="0.3"></div>
+        <div class="bg-orb bg-orb-2" data-parallax="0.5"></div>
+        <div class="bg-orb bg-orb-3" data-parallax="0.2"></div>
+        <div class="bg-orb bg-orb-4" data-parallax="0.4"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass" id="navbar">
+        <div class="nav-container">
+            <!-- Theme Toggle -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="theme-icon-moon" style="display:none;" xmlns="http://www.w3.org/2000/svg" width="20"
+                    height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+
+            <a href="../index.html" class="nav-logo">
+                <img src="../images/logo.png" alt="AV Logo" onerror="this.src='https://placehold.co/40x40?text=AV'">
+                <span class="logo-text">AVuz</span>
+            </a>
+
+            <div class="nav-menu glass-menu" id="navMenu">
+                <a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a>
+                <a href="about.html" class="nav-link active" data-i18n="nav.about">About</a>
+                <a href="skills.html" class="nav-link" data-i18n="nav.skills">Skills</a>
+                <a href="experience.html" class="nav-link" data-i18n="nav.experience">Experience</a>
+                <a href="projects.html" class="nav-link" data-i18n="nav.projects">Projects</a>
+                <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+            </div>
+
+            <div class="nav-controls">
+                <!-- Language Switch -->
+                <div class="lang-switch en" id="langSwitch">
+                    <div class="lang-switch-thumb"></div>
+                    <div class="lang-switch-labels">
+                        <span>EN</span>
+                        <span>VN</span>
+                    </div>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <section class="about-hero">
+            <div class="container">
+                <div class="about-content centered-content">
+                    <div class="about-info">
+                        <h1 class="section-title text-center"><span data-i18n="about.title">About</span> <span
+                                class="gradient-text" data-i18n="about.titleHighlight">Me</span></h1>
+                        <div class="about-description-container glass">
+                            <p class="about-description text-center">
+                                <span data-i18n="about.intro1">Computer Science student focused on software development
+                                    with
+                                    a strong growth mindset.</span>
+                                <span data-i18n="about.intro2">Completed coursework and personal projects; quick
+                                    learner,
+                                    receptive to feedback; strong teamwork and time management.</span>
+                                <span data-i18n="about.intro3">Seeking an Internship/Junior Developer role to contribute
+                                    to
+                                    real products and grow long-term.</span>
+                            </p>
+                        </div>
+
+                        <div class="personal-details-grid">
+                            <div class="detail-card glass">
+                                <span class="detail-icon"><i class="fas fa-map-marker-alt"></i></span>
+                                <div>
+                                    <span class="detail-label" data-i18n="contact.location">Location:</span>
+                                    <span class="detail-value" data-i18n="about.location">Ho Chi Minh City, Viet
+                                        Nam</span>
+                                </div>
+                            </div>
+                            <div class="detail-card glass">
+                                <span class="detail-icon"><i class="fas fa-globe"></i></span>
+                                <div>
+                                    <span class="detail-label">Website:</span>
+                                    <a href="https://avuz.unaux.com" target="_blank"
+                                        class="detail-value">avuz.unaux.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="soft-skills-section">
+            <div class="container">
+                <div class="soft-skills-grid">
+                    <div class="soft-skill-item glass">
+                        <i class="fas fa-users-cog"></i>
+                        <span data-i18n="about.teamwork">Teamwork</span>
+                    </div>
+                    <div class="soft-skill-item glass">
+                        <i class="fas fa-brain"></i>
+                        <span data-i18n="about.problemSolving">Problem Solving</span>
+                    </div>
+                    <div class="soft-skill-item glass">
+                        <i class="fas fa-clock"></i>
+                        <span data-i18n="about.timeManagement">Time Mgmt</span>
+                    </div>
+                    <div class="soft-skill-item glass">
+                        <i class="fas fa-comments"></i>
+                        <span data-i18n="about.communication">Comm</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="education-section">
+            <div class="container">
+                <h2 class="section-title text-center" data-i18n="about.education">Education</h2>
+                <div class="education-timeline">
+                    <div class="education-card glass">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap" style="font-size: 2rem;"></i>
+                        </div>
+                        <div class="edu-content">
+                            <div class="edu-year">2021 – 2026</div>
+                            <h3 class="edu-school" data-i18n="about.universityName">Industry University of Ho Chi Minh
+                                City</h3>
+                            <p class="edu-degree" data-i18n="about.major">Major: Information Technology</p>
+                            <p class="edu-location" data-i18n="about.location">Go Vap, Ho Chi Minh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="certs-section">
+            <div class="container">
+                <h2 class="section-title text-center" data-i18n="about.certs">Certs & Extras</h2>
+                <div class="certs-grid">
+                    <!-- Networking -->
+                    <div class="cert-card glass">
+                        <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
+                        <div class="cert-content">
+                            <h4 class="cert-name" data-i18n="about.networking">Networking</h4>
+                            <p class="cert-desc" data-i18n="about.networkingDesc">CCNA level knowledge (coursework +
+                                labs;
+                                Routing/Switching, OSPF, NAT, ACLs, VLAN, DHCP).</p>
+                        </div>
+                    </div>
+                    <!-- Languages -->
+                    <div class="cert-card glass">
+                        <div class="cert-icon"><i class="fas fa-language"></i></div>
+                        <div class="cert-content">
+                            <h4 class="cert-name" data-i18n="about.languages">Languages</h4>
+                            <p class="cert-desc">
+                                <span data-i18n="about.vietnamese">Vietnamese</span> (<span
+                                    data-i18n="about.native">native</span>),
+                                <span data-i18n="about.english">English</span> (<span data-i18n="about.working">working
+                                    proficiency</span>).
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Interests -->
+                    <div class="cert-card glass">
+                        <div class="cert-icon"><i class="fas fa-lightbulb"></i></div>
+                        <div class="cert-content">
+                            <h4 class="cert-name" data-i18n="about.interests">Interests</h4>
+                            <p class="cert-desc" data-i18n="about.interestsDesc">Strategic trading systems, systems
+                                design,
+                                embedded tinkering.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <a href="about.html" class="footer-link" data-i18n="nav.about">About</a>
+                    <a href="skills.html" class="footer-link" data-i18n="nav.skills">Skills</a>
+                    <a href="experience.html" class="footer-link" data-i18n="nav.experience">Experience</a>
+                    <a href="projects.html" class="footer-link" data-i18n="nav.projects">Projects</a>
+                    <a href="contact.html" class="footer-link" data-i18n="nav.contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/nguyễn-anh-vũ-28a605300" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Anhvu1107" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:anhvu.nguyen1107@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="footer-text">
+                    <span data-i18n="footer.designedBy">Designed & Built by</span> <span class="gradient-text">Nguyen
+                        Anh Vu</span>
+                </div>
+                <div class="footer-copyright">
+                    © 2024 <span data-i18n="footer.rights">All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/chatbot.js"></script>
+</body>
+
+</html>

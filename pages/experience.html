@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Nguyen Anh Vu</title>
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <meta name="description" content="Professional work experience of Nguyen Anh Vu.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/effects.css">
+    <link rel="stylesheet" href="../css/pages/experience.css">
+</head>
+
+<body class="loading">
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <span class="loader-text">Loading...</span>
+        </div>
+    </div>
+    <div class="page-transition"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="bg-animation">
+        <div class="bg-orb bg-orb-1" data-parallax="0.3"></div>
+        <div class="bg-orb bg-orb-2" data-parallax="0.5"></div>
+        <div class="bg-orb bg-orb-3" data-parallax="0.2"></div>
+        <div class="bg-orb bg-orb-4" data-parallax="0.4"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass" id="navbar">
+        <div class="nav-container">
+            <!-- Theme Toggle -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="theme-icon-moon" style="display:none;" xmlns="http://www.w3.org/2000/svg" width="20"
+                    height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+
+            <a href="../index.html" class="nav-logo">
+                <img src="../images/logo.png" alt="AV Logo" onerror="this.src='https://placehold.co/40x40?text=AV'">
+                <span class="logo-text">AVuz</span>
+            </a>
+
+            <div class="nav-menu glass-menu" id="navMenu">
+                <a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a>
+                <a href="about.html" class="nav-link" data-i18n="nav.about">About</a>
+                <a href="skills.html" class="nav-link" data-i18n="nav.skills">Skills</a>
+                <a href="experience.html" class="nav-link active" data-i18n="nav.experience">Experience</a>
+                <a href="projects.html" class="nav-link" data-i18n="nav.projects">Projects</a>
+                <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+            </div>
+
+            <div class="nav-controls">
+                <!-- Language Switch -->
+                <div class="lang-switch en" id="langSwitch">
+                    <div class="lang-switch-thumb"></div>
+                    <div class="lang-switch-labels">
+                        <span>EN</span>
+                        <span>VN</span>
+                    </div>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <!-- Hero Section -->
+        <section class="experience-hero">
+            <div class="hero-bg-glow"></div>
+            <div class="container">
+                <h1 class="page-title animate-fade-in-up">
+                    <span data-i18n="exp.title">Work</span>
+                    <span class="gradient-text" data-i18n="exp.titleHighlight">Experience</span>
+                </h1>
+                <p class="page-subtitle animate-fade-in-up delay-1" data-i18n="exp.subtitle">My professional journey and
+                    career milestones.</p>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="timeline-section">
+            <div class="container">
+                <div class="timeline">
+                    <!-- Vertical Line (CSS generated) -->
+
+                    <!-- Job 1: NEWIT (Present) -->
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date" data-i18n="exp.duration1">Jun 2024 – Present</div>
+                        <div class="timeline-content glass hover-glow">
+                            <div class="content-header">
+                                <div class="company-logo">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="header-info">
+                                    <h3 class="role" data-i18n="exp.role1">AI Development Intern</h3>
+                                    <h4 class="company" data-i18n="experience.job3.company">NEWIT VIETNAM</h4>
+                                </div>
+                            </div>
+                            <div class="content-body">
+                                <ul class="job-description">
+                                    <li data-i18n="exp.desc1_1">Built an embeddable AI chatbot widget used across
+                                        multiple websites.</li>
+                                    <li data-i18n="exp.desc1_2">Implemented RAG with OpenAI/LangChain, vector DBs, and
+                                        secure internal APIs.</li>
+                                </ul>
+                                <div class="tech-tags">
+                                    <span>Python</span>
+                                    <span>FastAPI</span>
+                                    <span>LangChain</span>
+                                    <span>Redis</span>
+                                    <span>Vanilla JS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 2: VINTECHCO -->
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date" data-i18n="exp.duration2">Jun 2023 – Feb 2024</div>
+                        <div class="timeline-content glass hover-glow">
+                            <div class="content-header">
+                                <div class="company-logo">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <div class="header-info">
+                                    <h3 class="role" data-i18n="exp.role2">Network-IoT Engineer</h3>
+                                    <h4 class="company" data-i18n="experience.job2.company">VINTECHCO</h4>
+                                </div>
+                            </div>
+                            <div class="content-body">
+                                <ul class="job-description">
+                                    <li data-i18n="exp.desc2_1">Designed LAN/WAN networks and HA architectures.</li>
+                                    <li data-i18n="exp.desc2_2">Built IoT solutions using ESP32, MQTT, and Node-RED.
+                                    </li>
+                                    <li data-i18n="exp.desc2_3">Developed React dashboards for system observability.
+                                    </li>
+                                    <li data-i18n="exp.desc2_4">Monitor the health and performance of websites, IT
+                                        infrastructure, and servers.</li>
+                                    <li data-i18n="exp.desc2_5">Troubleshoot technical issues across hardware and
+                                        software platforms.</li>
+                                    <li data-i18n="exp.desc2_6">Configured IT systems and resolved hardware/software
+                                        issues.</li>
+                                    <li data-i18n="exp.desc2_7">Respond to customer service requests, guide users
+                                        through diagnostic procedures, and escalate unresolved issues when necessary.
+                                    </li>
+                                    <li data-i18n="exp.desc2_8">Communicate technical solutions clearly to non-technical
+                                        users.</li>
+                                    <li data-i18n="exp.desc2_9">Record and update all support tickets, resolutions, and
+                                        related documentation.</li>
+                                    <li data-i18n="exp.desc2_10">Maintain direct customer interactions via phone, email,
+                                        and on-site visits to resolve technical problems.</li>
+                                    <li data-i18n="exp.desc2_11">Design simple websites and support database-related
+                                        tasks.</li>
+                                </ul>
+                                <div class="tech-tags">
+                                    <span>IoT/ESP32</span>
+                                    <span>MQTT</span>
+                                    <span>React</span>
+                                    <span>Node-RED</span>
+                                    <span>Networking</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 3: ASIA TECHNOLOGY -->
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date" data-i18n="exp.duration3">Feb 2022 – Apr 2023</div>
+                        <div class="timeline-content glass hover-glow">
+                            <div class="content-header">
+                                <div class="company-logo">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div class="header-info">
+                                    <h3 class="role" data-i18n="exp.role3">IT Helpdesk Intern</h3>
+                                    <h4 class="company" data-i18n="experience.job1.company">ASIA TECHNOLOGY</h4>
+                                </div>
+                            </div>
+                            <div class="content-body">
+                                <ul class="job-description">
+                                    <li data-i18n="exp.desc3_1">Managed SEO for websites and company servers.</li>
+                                    <li data-i18n="exp.desc3_2">Installed and configured hardware/software for internal
+                                        systems.</li>
+                                    <li data-i18n="exp.desc3_3">Provided technical support and troubleshooting.</li>
+                                    <li data-i18n="exp.desc3_4">Provided technical support and solutions to customer
+                                        inquiries via phone, email, or in-person.</li>
+                                    <li data-i18n="exp.desc3_5">Maintained comprehensive documentation of incidents and
+                                        solutions in the company’s knowledge base.</li>
+                                    <li data-i18n="exp.desc3_6">Participated in incident response for customer-related
+                                        system issues and followed escalation procedures as needed.</li>
+                                </ul>
+                                <div class="tech-tags">
+                                    <span>IT Support</span>
+                                    <span>SEO</span>
+                                    <span>Hardware</span>
+                                    <span>Documentation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary Stats -->
+        <section class="experience-summary animate-on-scroll">
+            <div class="container">
+                <div class="summary-grid">
+                    <div class="summary-card glass">
+                        <div class="summary-icon gradient-text">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="summary-info">
+                            <div class="summary-number stat-number" data-i18n="exp.yearsCount">1+</div>
+                            <div class="summary-label" data-i18n="exp.years">Years Experience</div>
+                        </div>
+                    </div>
+                    <div class="summary-card glass">
+                        <div class="summary-icon gradient-text">
+                            <i class="fa-solid fa-check-circle"></i>
+                        </div>
+                        <div class="summary-info">
+                            <div class="summary-number stat-number" data-i18n="exp.projectsCount">5+</div>
+                            <div class="summary-label" data-i18n="exp.projects">Projects Completed</div>
+                        </div>
+                    </div>
+                    <div class="summary-card glass">
+                        <div class="summary-icon gradient-text">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div class="summary-info">
+                            <div class="summary-number stat-number" data-i18n="exp.technologiesCount">10+</div>
+                            <div class="summary-label" data-i18n="exp.technologies">Technologies</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <!-- Navigation -->
+            <div class="footer-nav">
+                <a href="about.html" class="footer-link" data-i18n="nav.about">About</a>
+                <a href="skills.html" class="footer-link" data-i18n="nav.skills">Skills</a>
+                <a href="experience.html" class="footer-link" data-i18n="nav.experience">Experience</a>
+                <a href="projects.html" class="footer-link" data-i18n="nav.projects">Projects</a>
+                <a href="contact.html" class="footer-link" data-i18n="nav.contact">Contact</a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/vu-nguyen-anh-02484b335/" target="_blank" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="https://github.com/vna2003" target="_blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                </a>
+                <a href="mailto:anhvu20102003@gmail.com" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-text">
+                Designed & Built by <span class="highlight">Nguyen Anh Vu</span>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2024 All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/chatbot.js"></script>
+</body>
+
+</html>

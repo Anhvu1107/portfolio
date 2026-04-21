@@ -1,0 +1,854 @@
+/* ========================================
+   ADVANCED EFFECTS - Professional Portfolio
+======================================== */
+
+/* ========================================
+   1. PAGE LOADING ANIMATION
+======================================== */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.page-loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 16px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-text {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+/* Body hidden during load */
+body.loading {
+    overflow: hidden;
+}
+
+body.loaded .page-loader {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* ========================================
+   2. PAGE TRANSITIONS - Disabled
+======================================== */
+.page-transition {
+    display: none;
+}
+
+/* ========================================
+   3. ANIMATED BACKGROUND
+======================================== */
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: var(--bg-primary);
+    overflow: hidden;
+}
+
+/* Liquid Gradient Orbs */
+.bg-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.35;
+    animation: floatLiquid 25s infinite ease-in-out;
+    mix-blend-mode: screen;
+}
+
+.bg-orb-1 {
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, #6366f1 0%, transparent 70%);
+    top: -250px;
+    right: -250px;
+    animation-delay: 0s;
+}
+
+.bg-orb-2 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #a855f7 0%, transparent 70%);
+    bottom: -200px;
+    left: -200px;
+    animation-delay: -6s;
+}
+
+.bg-orb-3 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #06b6d4 0%, transparent 70%);
+    top: 35%;
+    left: 35%;
+    animation-delay: -12s;
+}
+
+.bg-orb-4 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #ec4899 0%, transparent 70%);
+    bottom: 25%;
+    right: 15%;
+    animation-delay: -18s;
+    opacity: 0.25;
+}
+
+@keyframes floatLiquid {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(60px, -60px) scale(1.15) rotate(90deg);
+    }
+
+    50% {
+        transform: translate(0, 70px) scale(0.85) rotate(180deg);
+    }
+
+    75% {
+        transform: translate(-60px, 0) scale(1.1) rotate(270deg);
+    }
+}
+
+/* Floating Particles */
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(99, 102, 241, 0.6);
+    animation: floatParticle 15s infinite ease-in-out;
+    opacity: 0;
+}
+
+.particle:nth-child(odd) {
+    background: rgba(168, 85, 247, 0.5);
+}
+
+.particle:nth-child(3n) {
+    background: rgba(236, 72, 153, 0.4);
+    width: 3px;
+    height: 3px;
+}
+
+.particle:nth-child(5n) {
+    background: rgba(6, 182, 212, 0.5);
+    width: 5px;
+    height: 5px;
+}
+
+@keyframes floatParticle {
+    0% {
+        opacity: 0;
+        transform: translateY(100vh) scale(0);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100vh) scale(1);
+    }
+}
+
+/* ========================================
+   4. LIQUID GLASS EFFECT - Clean iOS Style
+======================================== */
+
+/* Base Liquid Glass - Subtle & Professional */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Theme */
+[data-theme="light"] .glass {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+/* Subtle Light Refraction - Top Highlight Only */
+.glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.3) 50%,
+            transparent 100%);
+    pointer-events: none;
+}
+
+/* Hover - Subtle Enhancement */
+.glass:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(99, 102, 241, 0.2);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="light"] .glass:hover {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Glass Menu - Transparent */
+.glass-menu {
+    background: transparent;
+}
+
+/* Premium Card Glass */
+.glass-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(24px) saturate(160%);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Shimmer - Subtle */
+.glass-shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-shimmer::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(45deg,
+            transparent 40%,
+            rgba(255, 255, 255, 0.05) 50%,
+            transparent 60%);
+    transform: rotate(45deg);
+    animation: liquidShimmer 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes liquidShimmer {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+
+    50% {
+        transform: translateX(0%) translateY(0%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+/* Glow Border - Minimal */
+.glow-border {
+    position: relative;
+}
+
+.glow-border::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg,
+            rgba(99, 102, 241, 0.3),
+            rgba(168, 85, 247, 0.3));
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    filter: blur(8px);
+    transition: opacity 0.3s ease;
+}
+
+.glow-border:hover::after {
+    opacity: 0.4;
+}
+
+/* Parallax Layer */
+.parallax-layer {
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+}
+
+/* ========================================
+   5. ENHANCED HOVER EFFECTS
+======================================== */
+
+/* Card Hover - Lift + Gradient Glow */
+.link-card,
+.skill-card,
+.project-card,
+.contact-card {
+    position: relative;
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base),
+        border-color var(--transition-base);
+}
+
+.link-card:hover,
+.skill-card:hover,
+.project-card:hover,
+.contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 20px 40px rgba(99, 102, 241, 0.15),
+        0 0 0 1px rgba(99, 102, 241, 0.2);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+/* Shine effect on card hover */
+.link-card,
+.skill-card,
+.project-card {
+    overflow: hidden;
+}
+
+.link-card::before,
+.skill-card::before,
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent 30%,
+            rgba(255, 255, 255, 0.05) 50%,
+            transparent 70%);
+    transition: left 0.6s ease;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: inherit;
+}
+
+.link-card:hover::before,
+.skill-card:hover::before,
+.project-card:hover::before {
+    left: 100%;
+}
+
+/* Button Hover - Scale + Shadow */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.btn:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Social Link Hover */
+.social-link {
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* Image Hover - Subtle Zoom */
+.avatar-container {
+    overflow: hidden;
+}
+
+.avatar-container img {
+    transition: transform 0.5s ease;
+}
+
+.avatar-container:hover img {
+    transform: scale(1.05);
+}
+
+/* ========================================
+   6. MICROINTERACTIONS
+======================================== */
+
+/* Link Arrow Animation */
+.link-arrow {
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.link-card:hover .link-arrow {
+    transform: translateX(4px);
+    color: var(--accent);
+}
+
+/* Nav Link - No Underline */
+.nav-link {
+    position: relative;
+}
+
+/* Badge Pulse */
+.badge-dot {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+    }
+
+    50% {
+        opacity: 0.8;
+        box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+    }
+}
+
+/* Click Ripple Effect */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* ========================================
+   7. ANIMATED MENU
+======================================== */
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile Menu Slide */
+@media (max-width: 768px) {
+    .nav-menu {
+        transform: translateY(-10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* ========================================
+   8. TOOLTIPS
+======================================== */
+[data-tooltip] {
+    position: relative;
+    cursor: pointer;
+}
+
+[data-tooltip]::before,
+[data-tooltip]::after {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+    z-index: 1000;
+}
+
+[data-tooltip]::before {
+    content: attr(data-tooltip);
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    padding: 6px 12px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-size: 0.75rem;
+    white-space: nowrap;
+    margin-bottom: 8px;
+}
+
+[data-tooltip]::after {
+    content: '';
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--border);
+    margin-bottom: -4px;
+}
+
+[data-tooltip]:hover::before,
+[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+[data-tooltip]:hover::before {
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ========================================
+   9. SCROLL ANIMATIONS
+======================================== */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+[data-animate].visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Stagger children */
+[data-animate-stagger]>* {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+[data-animate-stagger].visible>*:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+[data-animate-stagger].visible>*:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+[data-animate-stagger].visible>*:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+[data-animate-stagger].visible>*:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+[data-animate-stagger].visible>* {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================================
+   10. SCROLL PROGRESS
+======================================== */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--accent);
+    z-index: 10001;
+    width: 0;
+    transition: width 0.1s linear;
+}
+
+/* ========================================
+   11. CURSOR EFFECTS
+======================================== */
+.cursor-glow {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9998;
+    transition: opacity 0.3s ease;
+}
+
+.cursor-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease;
+}
+
+.cursor-dot.hover {
+    width: 20px;
+    height: 20px;
+    background: rgba(59, 130, 246, 0.3);
+}
+
+@media (max-width: 768px) {
+
+    .cursor-glow,
+    .cursor-dot {
+        display: none;
+    }
+}
+
+/* ========================================
+   12. TEXT & GRADIENT EFFECTS
+======================================== */
+.gradient-text {
+    color: #6366f1;
+    /* Fallback */
+    background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899, #6366f1);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 4s ease infinite;
+    display: inline-block;
+}
+
+.gradient-text-animated {
+    color: #6366f1;
+    /* Fallback */
+    background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899, #06b6d4, #6366f1);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 6s ease infinite;
+    display: inline-block;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ========================================
+   13. SMOOTH SCROLLING
+======================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========================================
+   14. PAGE LOAD ANIMATION
+======================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-badge {
+    animation: fadeInUp 0.5s ease 0.1s forwards;
+    opacity: 0;
+}
+
+.hero-title {
+    animation: fadeInUp 0.5s ease 0.2s forwards;
+    opacity: 0;
+}
+
+.hero-roles {
+    animation: fadeInUp 0.5s ease 0.3s forwards;
+    opacity: 0;
+}
+
+.hero-description {
+    animation: fadeInUp 0.5s ease 0.4s forwards;
+    opacity: 0;
+}
+
+.hero-actions {
+    animation: fadeInUp 0.5s ease 0.5s forwards;
+    opacity: 0;
+}
+
+.hero-social {
+    animation: fadeInUp 0.5s ease 0.6s forwards;
+    opacity: 0;
+}
+
+.hero-visual {
+    animation: fadeInUp 0.6s ease 0.3s forwards;
+    opacity: 0;
+}
+
+/* ========================================
+   SCROLL REVEAL ANIMATIONS
+======================================== */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered reveal for cards */
+.scroll-reveal:nth-child(1) {
+    transition-delay: 0ms;
+}
+
+.scroll-reveal:nth-child(2) {
+    transition-delay: 50ms;
+}
+
+.scroll-reveal:nth-child(3) {
+    transition-delay: 100ms;
+}
+
+.scroll-reveal:nth-child(4) {
+    transition-delay: 150ms;
+}
+
+.scroll-reveal:nth-child(5) {
+    transition-delay: 200ms;
+}
+
+.scroll-reveal:nth-child(6) {
+    transition-delay: 250ms;
+}
+
+/* ========================================
+   15. REDUCED MOTION
+======================================== */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}

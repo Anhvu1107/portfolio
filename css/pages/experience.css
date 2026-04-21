@@ -1,0 +1,312 @@
+/* =========================================
+   Experience Page Styles
+   ========================================= */
+
+/* Use variables from variables.css
+   --bg-color, --text-color, --primary-color, --secondary-color
+   --glass-bg, --glass-border
+*/
+
+/* --- Page Content Layout --- */
+.page-content {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    min-height: 100vh;
+    position: relative;
+    z-index: 10;
+}
+
+/* --- Hero Section --- */
+.experience-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.hero-bg-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 200px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+    filter: blur(40px);
+    z-index: -1;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Timeline Section --- */
+.timeline-section {
+    position: relative;
+    margin-bottom: 6rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Vertical connector line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    /* Aligned with left edge on mobile, center on desktop if needed */
+    width: 2px;
+    background: linear-gradient(to bottom,
+            transparent 0%,
+            var(--primary-color) 15%,
+            var(--secondary-color) 85%,
+            transparent 100%);
+    opacity: 0.5;
+}
+
+/* Timeline Item Container */
+.timeline-item {
+    position: relative;
+    padding-left: 60px;
+    /* Space for line and dot */
+    margin-bottom: 4rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Dot on the line */
+.timeline-dot {
+    position: absolute;
+    left: 11px;
+    /* Center over the 2px line at left:20px (20 + 2/2 - 20/2) -> left: 11px */
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 10px var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 20px var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* Date Label */
+.timeline-date {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    backdrop-filter: blur(5px);
+}
+
+/* Glass Card Content */
+.timeline-content {
+    padding: 2rem;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content.hover-glow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.3);
+    border-color: rgba(99, 102, 241, 0.4);
+}
+
+/* Header: Logo + Title */
+.content-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    flex-shrink: 0;
+}
+
+.header-info h3.role {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 0 0 0.25rem 0;
+}
+
+.header-info h4.company {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Job Description List */
+.job-description {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.job-description li {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.job-description li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Tech Tags */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tags span {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary-color);
+    border-radius: 20px;
+    font-weight: 500;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    transition: all 0.2s ease;
+}
+
+.timeline-item:hover .tech-tags span {
+    background: rgba(99, 102, 241, 0.2);
+}
+
+/* --- Summary Stats Section --- */
+.experience-summary {
+    margin-top: 4rem;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.summary-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    /* Slightly brighter glass */
+}
+
+.summary-icon {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.summary-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-color);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.summary-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* --- Responsive Design --- */
+@media (min-width: 768px) {
+
+    /* Center the line on desktop? Or keep left?
+       Let's keep left for consistency, but maybe shift it a bit if we want a "zigzag" layout.
+       For now, a clean left-aligned timeline is very readable.
+    */
+    .timeline {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .timeline-item {
+        padding-left: 40px;
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-dot {
+        left: 1px;
+    }
+
+    .content-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}

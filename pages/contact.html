@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Nguyen Anh Vu</title>
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <meta name="description" content="Get in touch with Nguyen Anh Vu for collaboration opportunities.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/effects.css">
+    <link rel="stylesheet" href="../css/pages/contact.css">
+</head>
+
+<body class="loading">
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <span class="loader-text">Loading...</span>
+        </div>
+    </div>
+    <div class="page-transition"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="bg-animation">
+        <div class="bg-orb bg-orb-1" data-parallax="0.3"></div>
+        <div class="bg-orb bg-orb-2" data-parallax="0.5"></div>
+        <div class="bg-orb bg-orb-3" data-parallax="0.2"></div>
+        <div class="bg-orb bg-orb-4" data-parallax="0.4"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass" id="navbar">
+        <div class="nav-container">
+            <!-- Theme Toggle -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="theme-icon-moon" style="display:none;" xmlns="http://www.w3.org/2000/svg" width="20"
+                    height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+
+            <a href="../index.html" class="nav-logo">
+                <img src="../images/logo.png" alt="AV Logo" onerror="this.src='https://placehold.co/40x40?text=AV'">
+                <span class="logo-text">AVuz</span>
+            </a>
+
+            <div class="nav-menu glass-menu" id="navMenu">
+                <a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a>
+                <a href="about.html" class="nav-link" data-i18n="nav.about">About</a>
+                <a href="skills.html" class="nav-link" data-i18n="nav.skills">Skills</a>
+                <a href="experience.html" class="nav-link" data-i18n="nav.experience">Experience</a>
+                <a href="projects.html" class="nav-link" data-i18n="nav.projects">Projects</a>
+                <a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a>
+            </div>
+
+            <div class="nav-controls">
+                <!-- Language Switch -->
+                <div class="lang-switch en" id="langSwitch">
+                    <div class="lang-switch-thumb"></div>
+                    <div class="lang-switch-labels">
+                        <span>EN</span>
+                        <span>VN</span>
+                    </div>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <section class="contact-hero">
+            <div class="container">
+                <h1 class="page-title"><span data-i18n="contact.title">Let's Work</span> <span class="gradient-text"
+                        data-i18n="contact.titleHighlight">Together</span></h1>
+                <p class="page-subtitle" data-i18n="contact.subtitle">I'm currently looking for new opportunities. Feel
+                    free to reach out!</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-grid">
+                        <a href="mailto:anhvu.nguyen1107@gmail.com" class="contact-card glass">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label" data-i18n="contact.email">Email</span>
+                                <span class="contact-value">anhvu.nguyen1107@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <a href="tel:0363003507" class="contact-card glass">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.35a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.75.34 1.54.57 2.35.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label" data-i18n="contact.phone">Phone</span>
+                                <span class="contact-value">0363 003 507</span>
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/nguyễn-anh-vũ-28a605300" target="_blank"
+                            class="contact-card glass">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">Nguyen Anh Vu</span>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/Anhvu1107" target="_blank" class="contact-card glass">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">Anhvu1107</span>
+                            </div>
+                        </a>
+
+                        <a href="https://www.facebook.com/anhvu.nguyen1107" target="_blank" class="contact-card glass">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Facebook</span>
+                                <span class="contact-value">anhvu.nguyen1107</span>
+                            </div>
+                        </a>
+
+                        <a href="https://zalo.me/0363003507" target="_blank" class="contact-card glass">
+                            <div class="contact-icon zalo-icon">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
+                                    alt="Zalo" width="24" height="24">
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Zalo</span>
+                                <span class="contact-value">0363 003 507</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="contact-cta">
+                        <h3 class="cta-title" data-i18n="contact.ready">Ready to start a project?</h3>
+                        <p class="cta-text" data-i18n="contact.openTo">I'm always open to discussing new opportunities
+                            and creative ideas.</p>
+                        <a href="mailto:anhvu.nguyen1107@gmail.com" class="btn btn-primary btn-large">
+                            <span data-i18n="contact.sayHello">Say Hello</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="social-section">
+                        <p class="social-title" data-i18n="contact.findMe">Find me on social media</p>
+                        <div class="social-grid">
+                            <a href="https://www.linkedin.com/in/nguyễn-anh-vũ-28a605300" target="_blank"
+                                class="social-card glass" aria-label="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </a>
+                            <a href="https://github.com/Anhvu1107" target="_blank" class="social-card glass"
+                                aria-label="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                            <a href="mailto:anhvu.nguyen1107@gmail.com" class="social-card glass" aria-label="Email">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/anhvu.nguyen1107" target="_blank"
+                                class="social-card glass" aria-label="Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </a>
+                            <a href="https://zalo.me/0363003507" target="_blank" class="social-card glass zalo-social"
+                                aria-label="Zalo">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
+                                    alt="Zalo" width="24" height="24">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="form-container glass">
+                    <h2 class="form-title" data-i18n="contact.formTitle">Send details</h2>
+                    <form action="https://formsubmit.co/anhvu.nguyen1107@gmail.com" method="POST" class="contact-form">
+                        <!-- Honeypot -->
+                        <input type="text" name="_honey" style="display:none">
+                        <!-- Disable Captcha -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Success Page -->
+                        <input type="hidden" name="_next" value="https://avuz.unaux.com/pages/contact.html">
+
+                        <div class="form-group">
+                            <label for="name" class="form-label" data-i18n="contact.formName">Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required
+                                placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label" data-i18n="contact.formEmail">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" required
+                                placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label" data-i18n="contact.formMessage">Message</label>
+                            <textarea id="message" name="message" class="form-input form-textarea" rows="5" required
+                                placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span data-i18n="contact.formSend">Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <div class="map-container glass">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4241684499996!2d106.6983546!3d10.7715682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f20436d4dfd%3A0x6b8a82f34954492!2sHo%20Chi%20Minh%20City!5e0!3m2!1sen!2s!4v1680000000000!5m2!1sen!2s"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <a href="about.html" class="footer-link" data-i18n="nav.about">About</a>
+                    <a href="skills.html" class="footer-link" data-i18n="nav.skills">Skills</a>
+                    <a href="experience.html" class="footer-link" data-i18n="nav.experience">Experience</a>
+                    <a href="projects.html" class="footer-link" data-i18n="nav.projects">Projects</a>
+                    <a href="contact.html" class="footer-link" data-i18n="nav.contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/nguyễn-anh-vũ-28a605300" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Anhvu1107" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:anhvu.nguyen1107@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="footer-text">
+                    <span data-i18n="footer.designedBy">Designed & Built by</span> <span class="gradient-text">Nguyen
+                        Anh Vu</span>
+                </div>
+                <div class="footer-copyright">
+                    © 2024 <span data-i18n="footer.rights">All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/chatbot.js"></script>
+</body>
+
+</html>
